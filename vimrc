@@ -67,6 +67,12 @@ if has("autocmd")
   " file type associations
   autocmd BufNewFile,BufRead *.less set filetype=less
 
+  " tab settings
+  autocmd FileType php setl
+    \ noexpandtab
+    \ tabstop=4
+    \ shiftwidth=4
+
   " remove all trailing whitespace on save
   autocmd BufWritePre * :%s/\s\+$//e
 
