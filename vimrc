@@ -87,8 +87,8 @@ endif
 function! Plugins()
   " NERDTree alias
   if exists(":NERDTree")
-    " ctrl+n toggles NERDTree
-    nmap <silent> <c-n> :NERDTreeToggle<CR>
+    " toggle NERDTree
+    nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
 
     " quit if NERDTree window is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
