@@ -49,17 +49,6 @@ nnoremap G Gzz
 " remove search highlight with double escape
 map <silent> <esc><esc> :nohlsearch<cr>
 
-" comment/uncomment mappings
-map ,/ :s/^/\/\//<CR>:nohlsearch<CR>
-map /, :s/^\(\s*\)\=\/\//\1/<CR>:nohlsearch<CR>
-map ,# :s/^/#/<CR>:nohlsearch<CR>
-map #, :s/^\(\s*\)\=#/\1/<CR>:nohlsearch<CR>
-
-" wrapping comments
-map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
-map *, :s/^\/\* \(.*\) \*\/$/\1/<CR>:nohlsearch<CR>
-map ,< :s/^\(.*\)$/<\!-- \1 -->/<CR>:nohlsearch<CR>
-
 " initialize pathogen
 call pathogen#infect()
 
@@ -92,5 +81,11 @@ function! Plugins()
 
     " quit if NERDTree window is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+  endif
+
+  " TComment alias
+  if exists(":TComment")
+    " toggle commenting on the line
+    map <silent> <leader>/ :TComment<cr>
   endif
 endfunction

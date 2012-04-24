@@ -13,3 +13,6 @@
 [submodule "bundle/nerdtree-tabs"]
 	path = bundle/nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = https://github.com/tomtom/tcomment_vim.git
