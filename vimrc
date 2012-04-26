@@ -77,6 +77,12 @@ function! Plugins()
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   endif
 
+  " Fugitive
+  if exists(":Git")
+    " add git branch to the status line
+    set statusline=%-{fugitive#statusline()}\ %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %p%%
+  endif
+
   " TComment alias
   if exists(":TComment")
     " toggle commenting on the line
