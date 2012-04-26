@@ -62,12 +62,6 @@ if has("autocmd")
     \ tabstop=4
     \ shiftwidth=4
 
-  " remove all trailing whitespace on save
-  autocmd BufWritePre * :%s/\s\+$//e
-
-  " save files when focus is lost
-  autocmd FocusLost * :wa | doautocmd BufWritePre
-
   " plugins are loaded after .vimrc is processed
   autocmd VimEnter * call Plugins()
 endif
@@ -87,5 +81,10 @@ function! Plugins()
   if exists(":TComment")
     " toggle commenting on the line
     map <silent> <leader>/ :TComment<cr>
+  endif
+
+  if exists(":FixWhitespace")
+    " remove all trailing whitespace on save
+    autocmd BufWritePre * :FixWhitespace
   endif
 endfunction
