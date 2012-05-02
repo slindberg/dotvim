@@ -41,6 +41,9 @@ nmap <silent> <c-h> <c-w>h
 nmap <silent> <c-l> <c-w>l
 nmap <silent> <c-c> <c-w>c
 
+" shortcut to switch to last used buffer
+nnoremap <leader>l :e#<cr>
+
 " center on what we are looking for
 nnoremap n nzz
 nnoremap N Nzz
