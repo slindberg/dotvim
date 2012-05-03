@@ -31,6 +31,9 @@ com W w
 com Wq wq
 com Q q
 
+" write a file you opened without correct permissions
+com WW :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
 " Ex mode is dumb
 map Q <nop>
 
