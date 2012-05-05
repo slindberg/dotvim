@@ -74,6 +74,9 @@ endif
 
 " plugin specific settings
 function! Plugins()
+  " reset statusline
+  set statusline=
+
   " NERDTree alias
   if exists(":NERDTree")
     " toggle NERDTree
@@ -83,10 +86,18 @@ function! Plugins()
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   endif
 
+  if exists(":SyntasticCheck")
+    " manually perform syntax check
+    nmap <leader>c :SyntasticCheck<cr>
+
+    " add syntax error message to satus line
+    set statusline+=%-#warningmsg#%-{SyntasticStatuslineFlag()}%*
+  endif
+
   " Fugitive
   if exists(":Git")
     " add git branch to the status line
-    set statusline=%-{fugitive#statusline()}\ %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %p%%
+    set statusline+=%-{fugitive#statusline()}
   endif
 
   " TComment alias
@@ -99,4 +110,7 @@ function! Plugins()
     " remove all trailing whitespace on save
     autocmd BufWritePre * :FixWhitespace
   endif
+
+  " add basic status line format
+  set statusline+=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %p%%
 endfunction
