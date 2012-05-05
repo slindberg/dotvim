@@ -52,8 +52,14 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap G Gzz
 
+" set paste mode and enter insert mode
+nnoremap <leader>p :set paste!<CR>i
+
 " remove search highlight with double escape
 map <silent> <esc><esc> :nohlsearch<cr>
+
+" use the same symbols for tabs and eol as textmate
+set listchars=tab:▸\ ,eol:¬
 
 " initialize pathogen
 call pathogen#infect()
