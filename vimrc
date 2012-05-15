@@ -98,6 +98,14 @@ function! Plugins()
 
     " add syntax error message to satus line
     set statusline+=%-#warningmsg#%-{SyntasticStatuslineFlag()}%*
+
+    " no syntax highlighting on html files
+    let g:syntastic_mode_map = {
+      \ 'mode'              : 'active',
+      \ 'active_filetypes'  : [],
+      \ 'passive_filetypes' : ['html']
+    \ }
+
   endif
 
   " Fugitive
