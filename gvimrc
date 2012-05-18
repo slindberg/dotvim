@@ -1,6 +1,9 @@
 " set font and size
 set guifont=Menlo:h15
 
+" Smyck colorscheme looks better in vim GUI
+colorscheme smyck
+
 " automatically reload a file if it has changed outside of vim
 set autoread
 
