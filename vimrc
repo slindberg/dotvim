@@ -85,8 +85,12 @@ function! Plugins()
 
   " NERDTree alias
   if exists(":NERDTree")
-    " toggle NERDTree
-    nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
+    " toggle NERDTree, using TabsToggle if possible
+    if has("gui_running") && exists(":NERDTreeTabsToggle")
+      nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
+    else
+      nmap <silent> <leader>n :NERDTreeToggle<cr>
+    endif
 
     " quit if NERDTree window is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
