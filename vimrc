@@ -62,7 +62,7 @@ map <silent> <esc><esc> :nohlsearch<cr>
 set listchars=tab:▸\ ,eol:¬
 
 " initialize pathogen
-call pathogen#infect()
+call pathogen#infect('active')
 
 if has("autocmd")
   " file type associations
