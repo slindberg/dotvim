@@ -80,9 +80,6 @@ endif
 
 " plugin specific settings
 function! Plugins()
-  " reset statusline
-  set statusline=
-
   " NERDTree alias
   if exists(":NERDTree")
     " toggle NERDTree, using TabsToggle if possible
@@ -100,9 +97,6 @@ function! Plugins()
     " manually perform syntax check
     nmap <leader>c :SyntasticCheck<cr>
 
-    " add syntax error message to satus line
-    set statusline+=%-#warningmsg#%-{SyntasticStatuslineFlag()}%*
-
     " no syntax highlighting on html files
     let g:syntastic_mode_map = {
       \ 'mode'              : 'active',
@@ -110,12 +104,6 @@ function! Plugins()
       \ 'passive_filetypes' : ['html']
     \ }
 
-  endif
-
-  " Fugitive
-  if exists(":Git")
-    " add git branch to the status line
-    set statusline+=%-{fugitive#statusline()}
   endif
 
   " TComment alias
@@ -128,7 +116,4 @@ function! Plugins()
     " remove all trailing whitespace on save
     autocmd BufWritePre * :FixWhitespace
   endif
-
-  " add basic status line format
-  set statusline+=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %p%%
 endfunction
