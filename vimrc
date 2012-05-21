@@ -80,7 +80,6 @@ endif
 
 " plugin specific settings
 function! Plugins()
-  " NERDTree alias
   if exists(":NERDTree")
     " toggle NERDTree, using TabsToggle if possible
     if has("gui_running") && exists(":NERDTreeTabsToggle")
@@ -88,6 +87,9 @@ function! Plugins()
     else
       nmap <silent> <leader>n :NERDTreeToggle<cr>
     endif
+
+    " change the current directory when the root node changes
+    let g:NERDTreeChDirMode = 2
 
     " quit if NERDTree window is the last window open
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -106,7 +108,6 @@ function! Plugins()
 
   endif
 
-  " TComment alias
   if exists(":TComment")
     " toggle commenting on the line
     map <silent> <leader>/ :TComment<cr>
