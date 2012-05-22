@@ -7,6 +7,9 @@ colorscheme smyck
 " automatically reload a file if it has changed outside of vim
 set autoread
 
+" disable audible bell, visual bell doesn't work in MacVim
+set visualbell
+
 " save files when focus is lost
 autocmd FocusLost * :wa | doautocmd BufWritePre
 
