@@ -16,3 +16,9 @@ autocmd FocusLost * :wa | doautocmd BufWritePre
 " use cmd+shift+arrows for tab navigation like terminal
 noremap <silent> <d-s-right> :tabnext<cr>
 noremap <silent> <d-s-left> :tabprev<cr>
+
+if has("gui_macvim")
+  " unbind MacVim's new tab key so that the key can be remapped
+  " NOTE: this is ineffective if placed in .vimrc
+  macmenu &File.New\ Tab key=<nop>
+endif

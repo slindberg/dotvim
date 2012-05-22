@@ -108,6 +108,11 @@ function! Plugins()
 
   endif
 
+  if exists(":CommandT")
+    " remap new tab to open command-t window afterwards
+    map <d-t> :tabnew\|:CommandT<cr>
+  endif
+
   if exists(":TComment")
     " toggle commenting on the line
     map <silent> <leader>/ :TComment<cr>
