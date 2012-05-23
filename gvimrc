@@ -17,6 +17,10 @@ autocmd FocusLost * :wa | doautocmd BufWritePre
 noremap <silent> <d-s-right> :tabnext<cr>
 noremap <silent> <d-s-left> :tabprev<cr>
 
+" open help pages in a new tab
+cnoreabbrev help tab help
+cnoreabbrev h tab help
+
 if has("gui_macvim")
   " unbind MacVim's new tab key so that the key can be remapped
   " NOTE: this is ineffective if placed in .vimrc
