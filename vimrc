@@ -122,6 +122,11 @@ function! Plugins()
     map <silent> <leader>/ :TComment<cr>
   endif
 
+  if exists(":Ack")
+    " shorthand command for acking
+    cabbrev A Ack
+  endif
+
   if exists(":FixWhitespace")
     " remove all trailing whitespace on save
     autocmd BufWritePre * :FixWhitespace
