@@ -74,6 +74,10 @@ if has("autocmd")
     \ tabstop=4
     \ shiftwidth=4
 
+  " highlight the line the cursor is on in the focused window
+  autocmd WinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
+
   " plugins are loaded after .vimrc is processed
   autocmd VimEnter * call Plugins()
 endif
