@@ -70,8 +70,8 @@ if has("autocmd")
 
   " tab settings
   autocmd FileType php setl
-    \ noexpandtab
-    \ tabstop=4
+    \ expandtab
+    \ softtabstop=4
     \ shiftwidth=4
 
   " highlight the line the cursor is on in the focused window
