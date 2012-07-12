@@ -103,6 +103,9 @@ function! Plugins()
     " manually perform syntax check
     nmap <leader>c :SyntasticCheck<cr>
 
+    " automatically jump to first error
+    let g:syntastic_auto_jump=1
+
     " no syntax highlighting on html files
     let g:syntastic_mode_map = {
       \ 'mode'              : 'active',
