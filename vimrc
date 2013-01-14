@@ -53,7 +53,8 @@ nnoremap N Nzz
 nnoremap G Gzz
 
 " set paste mode and enter insert mode
-nnoremap <leader>p :set paste!<CR>i
+nnoremap <silent> <leader>p :set paste!<cr>i
+nnoremap <silent> <leader>pp :set nopaste<cr>
 
 " remove search highlight with double escape
 map <silent> <esc><esc> :nohlsearch<cr>
