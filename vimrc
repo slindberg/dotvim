@@ -20,19 +20,16 @@ filetype on                     " filetype detection on
 filetype plugin on              " load plugins
 syntax on                       " use syntax highlighting
 
-" choose a colorscheme
-colorscheme ir_black
-
 " change the leader key to the much quicker-to-type comma
 let mapleader=","
 
 " get rid of annoying shift key blunders
-com W w
-com Wq wq
-com Q q
+com! W w
+com! Wq wq
+com! Q q
 
 " write a file you opened without correct permissions
-com WW :execute ':silent w !sudo tee % > /dev/null' | :edit!
+com! WW :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " Ex mode is dumb
 map Q <nop>
@@ -56,6 +53,9 @@ nnoremap G Gzz
 nnoremap <silent> <leader>p :set paste!<cr>i
 nnoremap <silent> <leader>pp :set nopaste<cr>
 
+" reload vimrc
+nnoremap <leader>rr :source $MYVIMRC<cr>
+
 " remove search highlight with double escape
 map <silent> <esc><esc> :nohlsearch<cr>
 
@@ -64,6 +64,11 @@ set listchars=tab:▸\ ,eol:¬
 
 " initialize pathogen
 call pathogen#infect('active')
+
+" set colorscheme when in terminal
+if !has("gui_running")
+  colorscheme ir_black
+endif
 
 if has("autocmd")
   " file type associations
