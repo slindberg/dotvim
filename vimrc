@@ -49,6 +49,9 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap G Gzz
 
+" insert a blank line below the current line without entering insert mode
+nnoremap <c-o> m`o<esc>``
+
 " set paste mode and enter insert mode
 nnoremap <silent> <leader>p :set paste!<cr>i
 nnoremap <silent> <leader>pp :set nopaste<cr>
