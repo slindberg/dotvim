@@ -31,3 +31,15 @@
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/colors-ir_black"]
+	path = bundle/colors-ir_black
+	url = https://github.com/twerth/ir_black
+[submodule "bundle/colors-molokai"]
+	path = bundle/colors-molokai
+	url = https://github.com/tomasr/molokai
+[submodule "bundle/colors-smyck"]
+	path = bundle/colors-smyck
+	url = https://github.com/slindberg/vim-colors-smyck
+[submodule "bundle/colors-solarized"]
+	path = bundle/colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized

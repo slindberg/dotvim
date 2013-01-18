@@ -68,9 +68,12 @@ set listchars=tab:▸\ ,eol:¬
 " initialize pathogen
 call pathogen#infect('active')
 
+" always try to use a dark background
+set background=dark
+
 " set colorscheme when in terminal
 if !has("gui_running")
-  colorscheme ir_black
+  colorscheme solarized
 endif
 
 if has("autocmd")
