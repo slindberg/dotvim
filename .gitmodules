@@ -43,3 +43,9 @@
 [submodule "bundle/colors-solarized"]
 	path = bundle/colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/javascript-syntax"]
+	path = bundle/javascript-syntax
+	url = git@github.com:ehynds/vim-javascript-syntax.git
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = git@github.com:ehynds/vim-javascript.git
