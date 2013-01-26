@@ -49,3 +49,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git@github.com:ehynds/vim-javascript.git
+[submodule "bundle/ruby"]
+	path = bundle/ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
