@@ -1,8 +1,8 @@
-" general setting
-source ~/.vim/config.vim
+" general settings
+source ~/.vim/config/settings.vim
 
 " commands/mappings
-source ~/.vim/bindings.vim
+source ~/.vim/config/bindings.vim
 
 " initialize pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
@@ -15,8 +15,8 @@ endif
 
 if has("autocmd")
   " auto commands
-  source ~/.vim/autocmds.vim
+  source ~/.vim/config/autocmds.vim
 
   " load plugin config after .vimrc is processed
-  autocmd VimEnter * source ~/.vim/plugins.vim
+  autocmd VimEnter * source ~/.vim/config/plugins.vim
 endif
