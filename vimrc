@@ -1,7 +1,7 @@
-set ls=2                        " allways show status line
+set ls=2                        " always show status line
 set number                      " show line numbers
 set ruler                       " show line current line number/column
-set showmatch                   " show matching brackets/braces/parantheses
+set showmatch                   " show matching brackets/braces/parentheses
 set showcmd                     " display incomplete commands
 set ttyfast                     " smoother changes
 set tabstop=2                   " numbers of spaces of tab character
@@ -17,6 +17,8 @@ set ignorecase                  " when searching, ignore case
 set smartcase                   " only ignore case (above) if the search is all lowercase
 set autowriteall                " automatically save files after most commands
 set spell spelllang=en_us       " highlight spelling mistakes
+set listchars=tab:▸\ ,eol:¬     " use the same symbols for tabs and eol as textmate
+set background=dark             " always try to use a dark background
 filetype on                     " filetype detection on
 filetype plugin on              " load plugins
 syntax on                       " use syntax highlighting
@@ -34,6 +36,9 @@ com! WW :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " Ex mode is dumb
 map Q <nop>
+
+" remove search highlight with double escape
+map <silent> <esc><esc> :nohlsearch<cr>
 
 " use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> <c-w>k
@@ -60,17 +65,8 @@ nnoremap <silent> <leader>pp :set nopaste<cr>
 " reload vimrc
 nnoremap <leader>rr :source $MYVIMRC<cr>
 
-" remove search highlight with double escape
-map <silent> <esc><esc> :nohlsearch<cr>
-
-" use the same symbols for tabs and eol as textmate
-set listchars=tab:▸\ ,eol:¬
-
 " initialize pathogen
 call pathogen#infect('active')
-
-" always try to use a dark background
-set background=dark
 
 " set colorscheme when in terminal
 if !has("gui_running")
@@ -78,15 +74,6 @@ if !has("gui_running")
 endif
 
 if has("autocmd")
-  " file type associations
-  autocmd BufNewFile,BufRead *.less set filetype=less
-
-  " tab settings
-  autocmd FileType php setl
-    \ expandtab
-    \ softtabstop=4
-    \ shiftwidth=4
-
   " highlight the line the cursor is on in the focused window
   autocmd WinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
