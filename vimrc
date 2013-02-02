@@ -16,6 +16,7 @@ set hlsearch                    " highlight search results
 set ignorecase                  " when searching, ignore case
 set smartcase                   " only ignore case (above) if the search is all lowercase
 set autowriteall                " automatically save files after most commands
+set spell spelllang=en_us       " highlight spelling mistakes
 filetype on                     " filetype detection on
 filetype plugin on              " load plugins
 syntax on                       " use syntax highlighting
