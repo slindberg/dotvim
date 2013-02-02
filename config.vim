@@ -1,6 +1,8 @@
 " General
 filetype plugin on              " detect file types and use plugins
 syntax on                       " use syntax highlighting
+set directory=~/.vim/tmp//,.    " directory for swap files
+set undodir=~/.vim/undo         " directory for persistent undo history
 
 " UI
 set title                       " set the title of the window to the file name
@@ -16,6 +18,7 @@ set ttyfast                     " smoother changes
 set whichwrap=b,s,h,l,<,>,[,]   " move freely between lines using these commands
 set autoread                    " automatically reload changes to files
 set autowriteall                " automatically save files after most commands
+set undofile                    " keep a history of changes to enable undo between sessions
 set spell spelllang=en_us       " highlight spelling mistakes
 set showmatch                   " show matching brackets/braces/parentheses
 set nofoldenable                " disable code folding
