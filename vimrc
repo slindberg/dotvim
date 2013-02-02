@@ -66,6 +66,7 @@ nnoremap <silent> <leader>pp :set nopaste<cr>
 nnoremap <leader>rr :source $MYVIMRC<cr>
 
 " initialize pathogen
+runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect('active')
 
 " set colorscheme when in terminal
