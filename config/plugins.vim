@@ -63,3 +63,9 @@ if exists(":FixWhitespace")
   " remove all trailing whitespace on save
   autocmd BufWritePre * :FixWhitespace
 endif
+
+if exists(":SidewaysLeft")
+  " shift parameters left or right
+  nnoremap <silent> <leader>s :SidewaysRight<cr>
+  nnoremap <silent> <leader>S :SidewaysLeft<cr>
+endif
