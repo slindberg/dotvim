@@ -1,6 +1,6 @@
 if exists(":NERDTree")
   " toggle NERDTree, using TabsToggle if possible
-  if has("gui_running") && exists(":NERDTreeTabsToggle")
+  if has("gui_running") && exists(":NERDTreeMirrorToggle")
     nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
   else
     nmap <silent> <leader>n :NERDTreeToggle<cr>
@@ -8,6 +8,21 @@ if exists(":NERDTree")
 
   " change the current directory when the root node changes
   let g:NERDTreeChDirMode = 2
+
+  " don't show the 'Press ? for help' text
+  let g:NERDTreeMinimalUI = 1
+
+  " show hidden files by default
+  let g:NERDTreeShowHidden = 1
+
+  " but ignore the git dir
+  let g:NERDTreeIgnore = [ '\.git$' ]
+
+  " close invalid buffers automatically
+  let g:NERDTreeAutoDeleteBuffer = 1
+
+  " disable bookmarks by specifying an invalid path
+  let g:NERDTreeBookmarksFile = ''
 
   " quit if NERDTree window is the last window open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
