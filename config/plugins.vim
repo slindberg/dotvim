@@ -69,3 +69,10 @@ if exists(":SidewaysLeft")
   nnoremap <silent> <leader>s :SidewaysRight<cr>
   nnoremap <silent> <leader>S :SidewaysLeft<cr>
 endif
+
+if exists(":Tabularize")
+  nmap <leader>t= :Tabularize /=<cr>
+  vmap <leader>t= :Tabularize /=<cr>
+  nmap <leader>t: :Tabularize /:<cr>
+  vmap <leader>t: :Tabularize /:<cr>
+endif
