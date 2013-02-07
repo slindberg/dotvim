@@ -56,7 +56,13 @@ endif
 
 if exists(":Ack")
   " shorthand command for acking
-  cabbrev A Ack
+  cabbrev A Ack!
+
+  " ack for the visually selected text
+  vmap <leader>a y:<c-u>Ack! <c-r>0<cr>
+
+  " ack from the last search
+  nmap <leader>a :AckFromSearch!<cr>
 endif
 
 if exists(":FixWhitespace")
