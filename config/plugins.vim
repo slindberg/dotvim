@@ -82,3 +82,20 @@ if exists(":Tabularize")
   nmap <leader>t: :Tabularize /:<cr>
   vmap <leader>t: :Tabularize /:<cr>
 endif
+
+if exists(":DelimitMateSwitch")
+  " put matching cr on the next line
+  let g:delimitMate_expand_cr = 1
+
+  " add '<:>' to matched pairs when in html
+  au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
+
+  " ignore double quotes in vim files since they start comments
+  au FileType vim let b:delimitMate_quotes = "' `"
+
+  " match asterisks in markdown files
+  au FileType markdown let b:delimitMate_quotes = "\" ` *"
+
+  " changing settings requires a reload
+  :silent DelimitMateReload
+endif

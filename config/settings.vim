@@ -28,8 +28,8 @@ set nostartofline               " don't move cursor do the start of the line aft
 set tabstop=2                   " numbers of spaces of tab character
 set shiftwidth=2                " numbers of spaces to (auto)indent
 set expandtab                   " use spaces instead of evil tabs
-set smartindent                 " like above but more generic
-set autoindent                  " auto indentation
+set autoindent                  " auto indentation after inserting a newline
+set cindent                     " smart indentation based on nesting
 
 " Search
 set incsearch                   " search incrementally
