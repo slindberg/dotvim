@@ -66,8 +66,11 @@ if exists(":Ack")
 endif
 
 if exists(":FixWhitespace")
+  " shortcut for fixing whitespace manually
+  nmap <leader>w :FixWhitespace<cr>
+
   " remove all trailing whitespace on save
-  autocmd BufWritePre * :FixWhitespace
+  " autocmd BufWritePre * :FixWhitespace
 endif
 
 if exists(":SidewaysLeft")
