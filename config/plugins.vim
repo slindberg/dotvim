@@ -1,4 +1,4 @@
-if exists(":NERDTree")
+if exists("loaded_nerd_tree")
   " toggle NERDTree, using TabsToggle if possible
   if has("gui_running") && exists(":NERDTreeMirrorToggle")
     nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
@@ -28,7 +28,7 @@ if exists(":NERDTree")
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
-if exists(":SyntasticCheck")
+if exists("loaded_syntastic_plugin")
   " manually perform syntax check
   nmap <leader>c :SyntasticCheck<cr>
 
@@ -44,17 +44,17 @@ if exists(":SyntasticCheck")
 
 endif
 
-if exists(":CommandT")
+if exists("command_t_loaded")
   " remap new tab to open command-t window afterwards
   map <d-t> :tabnew\|:CommandT<cr>
 endif
 
-if exists(":TComment")
+if exists("loaded_tcomment")
   " toggle commenting on the line
   map <silent> <leader>/ :TComment<cr>
 endif
 
-if exists(":Ack")
+if exists("ackprg")
   " shorthand command for acking
   cabbrev A Ack!
 
@@ -73,20 +73,21 @@ if exists(":FixWhitespace")
   " autocmd BufWritePre * :FixWhitespace
 endif
 
-if exists(":SidewaysLeft")
+if exists("loaded_sideways")
   " shift parameters left or right
   nnoremap <silent> <leader>s :SidewaysRight<cr>
   nnoremap <silent> <leader>S :SidewaysLeft<cr>
 endif
 
-if exists(":Tabularize")
+if exists("tabular_loaded")
+  " shortcuts for common alignments
   nmap <leader>t= :Tabularize /=<cr>
   vmap <leader>t= :Tabularize /=<cr>
   nmap <leader>t: :Tabularize /:<cr>
   vmap <leader>t: :Tabularize /:<cr>
 endif
 
-if exists(":DelimitMateSwitch")
+if exists("loaded_delimitMate")
   " put matching cr on the next line
   let g:delimitMate_expand_cr = 1
 
