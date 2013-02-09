@@ -103,3 +103,8 @@ if exists("loaded_delimitMate")
   " changing settings requires a reload
   :silent DelimitMateReload
 endif
+
+if exists("loaded_supertab") && exists("loaded_delimitMate")
+  " if both supertab and delimitmate are loaded, combine their cr mappings
+  imap <expr> <cr> pumvisible() ? '<c-y>' : '<plug>delimitMateCR'
+endif
