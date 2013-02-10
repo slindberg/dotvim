@@ -8,10 +8,8 @@ source ~/.vim/config/bindings.vim
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect('active')
 
-" set colorscheme when in terminal
-if !has("gui_running")
-  colorscheme solarized
-endif
+" set colorscheme
+source ~/.vim/config/colorscheme.vim
 
 if has("autocmd")
   " auto commands
