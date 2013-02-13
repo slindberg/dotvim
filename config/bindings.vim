@@ -33,9 +33,8 @@ nnoremap G Gzz
 " insert a blank line below the current line without entering insert mode
 nnoremap <c-o> m`o<esc>``
 
-" set paste mode and enter insert mode
-nnoremap <silent> <leader>p :set paste!<cr>i
-nnoremap <silent> <leader>pp :set nopaste<cr>
+" toggle paste mode
+nnoremap <silent> <leader>p :set invpaste<CR>
 
 " reload vimrc
 nnoremap <leader>rr :source $MYVIMRC<cr>
