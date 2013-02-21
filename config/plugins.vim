@@ -29,8 +29,15 @@ if exists("loaded_nerd_tree")
 endif
 
 if exists("loaded_syntastic_plugin")
+  " change default symbol characters
+  let g:syntastic_error_symbol='✗'
+  let g:syntastic_warning_symbol='⚠'
+
   " manually perform syntax check
   nmap <leader>c :SyntasticCheck<cr>
+
+  " remove all error symbols in the signs column
+  nmap <leader>C :sign unplace *<cr>
 
   " automatically jump to first error
   let g:syntastic_auto_jump=1
@@ -41,7 +48,6 @@ if exists("loaded_syntastic_plugin")
     \ 'active_filetypes'  : [],
     \ 'passive_filetypes' : ['html']
   \ }
-
 endif
 
 if exists("command_t_loaded")
