@@ -22,6 +22,10 @@ nmap <silent> <c-h> <c-w>h
 nmap <silent> <c-l> <c-w>l
 nmap <silent> <c-c> <c-w>c
 
+" move lines in visual mode and re-indent
+vnoremap <c-j> :m'>+1<cr>gv=gv
+vnoremap <c-k> :m'<-2<cr>gv=gv
+
 " shortcut to switch to last used buffer
 nnoremap <leader>l :e#<cr>
 
