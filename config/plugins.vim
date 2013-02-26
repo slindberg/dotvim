@@ -50,7 +50,7 @@ if exists("loaded_syntastic_plugin")
   \ }
 endif
 
-if exists("command_t_loaded")
+if exists("command_t_loaded") && has("gui_running")
   " remap new tab to open command-t window afterwards
   map <d-t> :tabnew\|:CommandT<cr>
 endif
