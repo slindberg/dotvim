@@ -57,7 +57,8 @@ endif
 
 if exists("loaded_tcomment")
   " toggle commenting on the line
-  map <silent> <leader>/ :TComment<cr>
+  vmap <silent> <leader>/ :TComment<cr>
+  nmap <silent> <leader>/ :TComment<cr>^j
 endif
 
 if exists("ackprg")
