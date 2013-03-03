@@ -1,5 +1,6 @@
 " General
 filetype plugin on              " detect file types and use plugins
+filetype indent on              " use file type specific indentation
 syntax on                       " use syntax highlighting
 set directory=~/.vim/tmp//,.    " directory for swap files
 set undodir=~/.vim/undo         " directory for persistent undo history
@@ -29,7 +30,6 @@ set tabstop=2                   " numbers of spaces of tab character
 set shiftwidth=2                " numbers of spaces to (auto)indent
 set expandtab                   " use spaces instead of evil tabs
 set autoindent                  " auto indentation after inserting a newline
-set cindent                     " smart indentation based on nesting
 
 " Search
 set incsearch                   " search incrementally
