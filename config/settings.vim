@@ -1,9 +1,12 @@
-" General
-filetype plugin on              " detect file types and use plugins
-filetype indent on              " use file type specific indentation
-syntax on                       " use syntax highlighting
+" Directories
 set directory=~/.vim/tmp//,.    " directory for swap files
 set undodir=~/.vim/undo         " directory for persistent undo history
+
+" Filetypes
+syntax on                       " use syntax highlighting
+filetype plugin on              " detect file types and use plugins
+filetype indent on              " use file type specific indentation
+set modelines=3                 " search in the first 3 lines for a modeline declaration
 
 " UI
 set title                       " set the title of the window to the file name
