@@ -42,3 +42,13 @@ nnoremap <silent> <leader>p :set invpaste<CR>
 
 " reload vimrc
 nnoremap <leader>rr :source $MYVIMRC<cr>
+
+" Search for visually selected text, forwards or backwards.
+vnoremap <silent> * :<C-U>
+  \let tmp_reg=getreg('"')<Bar>let tmp_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', tmp_reg, tmp_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let tmp_reg=getreg('"')<Bar>let tmp_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', tmp_reg, tmp_regtype)<CR>
