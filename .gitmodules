@@ -92,3 +92,6 @@
 [submodule "bundle/golang"]
 	path = bundle/golang
 	url = git@github.com:jnwhiteh/vim-golang.git
+[submodule "bundle/camelcasemotion"]
+	path = bundle/camelcasemotion
+	url = git@github.com:bkad/CamelCaseMotion.git
