@@ -89,3 +89,6 @@
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = git@github.com:vim-scripts/closetag.vim.git
+[submodule "bundle/golang"]
+	path = bundle/golang
+	url = git@github.com:jnwhiteh/vim-golang.git
