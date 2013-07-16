@@ -56,6 +56,9 @@ if exists("command_t_loaded") && has("gui_running")
 
   " remap new tab to open command-t window afterwards
   map <d-t> :tabnew\|:CommandT<cr>
+
+  " remap open file to command-t
+  map <d-o> :CommandT<cr>
 endif
 
 if exists("loaded_tcomment")
