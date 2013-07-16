@@ -51,6 +51,9 @@ if exists("loaded_syntastic_plugin")
 endif
 
 if exists("command_t_loaded") && has("gui_running")
+  " ignore common non-project related directories
+  set wildignore=.git,node_modules/**,out/**
+
   " remap new tab to open command-t window afterwards
   map <d-t> :tabnew\|:CommandT<cr>
 endif
