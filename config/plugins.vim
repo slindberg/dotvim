@@ -52,7 +52,7 @@ endif
 
 if exists("command_t_loaded") && has("gui_running")
   " ignore common non-project related directories
-  set wildignore=.git,node_modules/**,out/**
+  set wildignore=.git,node_modules/**,out/**,dist/**
 
   " remap new tab to open command-t window afterwards
   map <d-t> :tabnew\|:CommandT<cr>
