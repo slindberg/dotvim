@@ -26,6 +26,12 @@ nmap <silent> <c-c> <c-w>c
 vnoremap J :m'>+1<cr>gv=gv
 vnoremap K :m'<-2<cr>gv=gv
 
+" re-indent pasted text
+nnoremap p p=`]
+nnoremap P P=`]
+vnoremap p p=`]
+vnoremap P P=`]
+
 " shortcut to switch to last used buffer
 nnoremap <leader>l :e#<cr>
 
