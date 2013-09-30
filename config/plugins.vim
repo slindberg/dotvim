@@ -59,6 +59,9 @@ if exists("command_t_loaded") && has("gui_running")
 
   " remap open file to command-t
   map <d-o> :CommandT<cr>
+
+  " shortcut for flushing the cache
+  nmap <leader>f :CommandTFlush<cr>
 endif
 
 if exists("loaded_tcomment")
