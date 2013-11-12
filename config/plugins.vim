@@ -30,8 +30,8 @@ endif
 
 if exists("loaded_syntastic_plugin")
   " change default symbol characters
-  let g:syntastic_error_symbol='✗'
-  let g:syntastic_warning_symbol='⚠'
+  let g:syntastic_error_symbol = '✗'
+  let g:syntastic_warning_symbol = '⚠'
 
   " manually perform syntax check
   nmap <leader>c :SyntasticCheck<cr>
@@ -125,4 +125,14 @@ endif
 if exists("loaded_supertab") && exists("loaded_delimitMate")
   " if both supertab and delimitmate are loaded, combine their cr mappings
   imap <expr> <cr> pumvisible() ? '<c-y>' : '<plug>delimitMateCR'
+endif
+
+if exists("did_UltiSnips_vim")
+  " use the tab key for everything
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+  call UltiSnips_MapKeys()
+
+  " don't use the default snippets
+  let g:UltiSnipsSnippetDirectories = ["snippets"]
 endif

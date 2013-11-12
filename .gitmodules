@@ -98,3 +98,6 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = git@github.com:nono/vim-handlebars.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
