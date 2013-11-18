@@ -56,9 +56,11 @@ if exists("command_t_loaded") && has("gui_running")
 
   " remap new tab to open command-t window afterwards
   map <d-t> :tabnew\|:CommandT<cr>
+  imap <d-t> <esc>:tabnew\|:CommandT<cr>
 
   " remap open file to command-t
   map <d-o> :CommandT<cr>
+  imap <d-o> <esc>:CommandT<cr>
 
   " shortcut for flushing the cache
   nmap <leader>f :CommandTFlush<cr>
