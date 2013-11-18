@@ -35,6 +35,10 @@ vnoremap P P=`]
 " shortcut to switch to last used buffer
 nnoremap <leader>l :e#<cr>
 
+" shortcut for jumping to the next/previous error in the error list
+nnoremap <leader>] :lnext<CR>
+nnoremap <leader>[ :lprev<CR>
+
 " center on what we are looking for
 nnoremap n nzz
 nnoremap N Nzz
