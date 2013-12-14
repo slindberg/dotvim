@@ -136,3 +136,22 @@ if exists("did_UltiSnips_vim")
   " don't use the default snippets
   let g:UltiSnipsSnippetDirectories = ["snippets"]
 endif
+
+if exists("HiCursorWords_delay")
+  let g:highlightGroups = [
+    \ 'Identifier',
+    \ 'Special',
+    \ 'jsBlock',
+    \ 'jsBracket',
+    \ 'jsObjectKey',
+    \ 'jsFunctionKey',
+    \ 'jsFuncBlock',
+    \ 'jsFuncCall',
+    \ 'jsFuncArgs',
+    \ 'jsParen'
+  \ ]
+
+  let g:HiCursorWords_hiGroupRegexp = '\(' . join(g:highlightGroups, '\|') . '\)'
+
+  highlight! WordUnderTheCursor gui=bold, guifg=#E428A6
+endif

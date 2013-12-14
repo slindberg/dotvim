@@ -101,3 +101,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "bundle/highlight-cursor-words"]
+	path = bundle/highlight-cursor-words
+	url = git@github.com:OrelSokolov/HiCursorWords.git
