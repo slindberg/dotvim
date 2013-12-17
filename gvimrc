@@ -27,3 +27,28 @@ if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   macmenu &File.Open\.\.\. key=<nop>
 endif
+
+" set custom tab label that displays the immediate directory name
+function GuiTabLabel()
+  let label = ''
+
+  " Add '+' if one of the buffers in the tab page is modified
+  let bufnrlist = tabpagebuflist(v:lnum)
+  for bufnr in bufnrlist
+    if getbufvar(bufnr, "&modified")
+      let label = '+'
+      break
+    endif
+  endfor
+
+  " Add file name with immediate directory
+  let bufferId = bufnrlist[tabpagewinnr(v:lnum) - 1]
+  let fileName = bufname(bufferId)
+  let lastSlashIndex = strridx(fileName, '/')
+  if (lastSlashIndex != -1)
+    let lastSlashIndex = strridx(fileName, '/', lastSlashIndex - 1)
+  endif
+
+  return label . strpart(fileName, lastSlashIndex + 1, strlen(fileName))
+endfunction
+set guitablabel=%{GuiTabLabel()}
