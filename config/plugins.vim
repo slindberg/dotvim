@@ -21,9 +21,6 @@ if exists("loaded_nerd_tree")
   " close invalid buffers automatically
   let g:NERDTreeAutoDeleteBuffer = 1
 
-  " disable bookmarks by specifying an invalid path
-  let g:NERDTreeBookmarksFile = ''
-
   " quit if NERDTree window is the last window open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
