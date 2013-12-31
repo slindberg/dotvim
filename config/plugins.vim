@@ -152,3 +152,8 @@ if exists("HiCursorWords_delay")
 
   highlight! WordUnderTheCursor gui=bold, guifg=#E428A6
 endif
+
+if exists('loaded_operator_camelize')
+  " mapping for camelizing/decamelizing ('h' for Hump?)
+  map <leader>h <plug>(operator-camelize-toggle)
+endif

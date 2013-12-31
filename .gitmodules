@@ -100,3 +100,11 @@
 [submodule "bundle/highlight-cursor-words"]
 	path = bundle/highlight-cursor-words
 	url = git@github.com:OrelSokolov/HiCursorWords.git
+[submodule "bundle/operator-camelize"]
+	path = bundle/operator-camelize
+	url = git@github.com:tyru/operator-camelize.vim.git
+  ignore = untracked
+[submodule "bundle/operator-user"]
+	path = bundle/operator-user
+	url = git@github.com:kana/vim-operator-user.git
+  ignore = untracked
