@@ -11,10 +11,11 @@ call pathogen#infect('active')
 " set colorscheme
 source ~/.vim/config/colorscheme.vim
 
-if has("autocmd")
-  " auto commands
-  source ~/.vim/config/autocmds.vim
+" auto commands
+source ~/.vim/config/autocmds.vim
 
-  " load plugin config after .vimrc is processed
-  autocmd VimEnter * source ~/.vim/config/plugins.vim
-endif
+" configure plugins
+source ~/.vim/config/pre-plugins.vim
+
+" run post-init plugin configuration after .vimrc is processed
+autocmd VimEnter * source ~/.vim/config/post-plugins.vim

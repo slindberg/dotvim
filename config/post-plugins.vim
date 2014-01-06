@@ -1,3 +1,4 @@
+" NERDTree
 if exists("loaded_nerd_tree")
   " toggle NERDTree, using TabsToggle if possible
   if has("gui_running") && exists(":NERDTreeMirrorToggle")
@@ -6,48 +7,21 @@ if exists("loaded_nerd_tree")
     nmap <silent> <leader>n :NERDTreeToggle<cr>
   endif
 
-  " change the current directory when the root node changes
-  let g:NERDTreeChDirMode = 2
-
-  " don't show the 'Press ? for help' text
-  let g:NERDTreeMinimalUI = 1
-
-  " show hidden files by default
-  let g:NERDTreeShowHidden = 1
-
-  " but ignore the git dir
-  let g:NERDTreeIgnore = [ '\.git$' ]
-
-  " close invalid buffers automatically
-  let g:NERDTreeAutoDeleteBuffer = 1
-
   " quit if NERDTree window is the last window open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
+" Syntastic
 if exists("loaded_syntastic_plugin")
-  " change default symbol characters
-  let g:syntastic_error_symbol = '✗'
-  let g:syntastic_warning_symbol = '⚠'
-
   " manually perform syntax check
   nmap <leader>c :SyntasticCheck<cr>
 
   " remove all error symbols in the signs column
   nmap <leader>C :sign unplace *<cr>
-
-  " automatically jump to first error
-  let g:syntastic_auto_jump=1
-
-  " no syntax highlighting on html files
-  let g:syntastic_mode_map = {
-    \ 'mode'              : 'active',
-    \ 'active_filetypes'  : [],
-    \ 'passive_filetypes' : ['html']
-  \ }
 endif
 
-if exists("command_t_loaded") && has("gui_running")
+" Command-T
+if has("gui_running") && exists("command_t_loaded")
   " ignore common non-project related directories
   set wildignore=.git,node_modules/**,out/**,dist/**,build/**
 
@@ -63,12 +37,7 @@ if exists("command_t_loaded") && has("gui_running")
   nmap <leader>f :CommandTFlush<cr>
 endif
 
-if exists("loaded_tcomment")
-  " toggle commenting on the line
-  vmap <silent> <leader>/ :TComment<cr>
-  nmap <silent> <leader>/ :TComment<cr>^j
-endif
-
+" Ack
 if exists("ackprg")
   " shorthand command for acking
   cabbrev A Ack!
@@ -80,6 +49,14 @@ if exists("ackprg")
   nmap <leader>a :AckFromSearch!<cr>
 endif
 
+" tComment
+if exists("loaded_tcomment")
+  " toggle commenting on the line
+  vmap <silent> <leader>/ :TComment<cr>
+  nmap <silent> <leader>/ :TComment<cr>^j
+endif
+
+" FixWhitespace
 if exists(":FixWhitespace")
   " shortcut for fixing whitespace manually
   nmap <leader>w :FixWhitespace<cr>
@@ -88,12 +65,14 @@ if exists(":FixWhitespace")
   " autocmd BufWritePre * :FixWhitespace
 endif
 
+" Sideways
 if exists("loaded_sideways")
   " shift parameters left or right
   nnoremap <silent> <leader>s :SidewaysRight<cr>
   nnoremap <silent> <leader>S :SidewaysLeft<cr>
 endif
 
+" Tabular
 if exists("tabular_loaded")
   " shortcuts for common alignments
   nmap <leader>t= :Tabularize /=<cr>
@@ -102,57 +81,18 @@ if exists("tabular_loaded")
   vmap <leader>t: :Tabularize /:<cr>
 endif
 
-if exists("loaded_delimitMate")
-  " put matching cr on the next line
-  let g:delimitMate_expand_cr = 1
-
-  " add '<:>' to matched pairs when in html
-  au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
-
-  " ignore double quotes in vim files since they start comments
-  au FileType vim let b:delimitMate_quotes = "' `"
-
-  " match asterisks in markdown files
-  au FileType markdown let b:delimitMate_quotes = "\" ` *"
-
-  " changing settings requires a reload
-  :silent DelimitMateReload
-endif
-
+" Supertab + DelimitMate
 if exists("loaded_supertab") && exists("loaded_delimitMate")
   " if both supertab and delimitmate are loaded, combine their cr mappings
   imap <expr> <cr> pumvisible() ? '<c-y>' : '<plug>delimitMateCR'
 endif
 
-if exists("did_UltiSnips_vim")
-  " use the tab key for everything
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-  call UltiSnips_MapKeys()
-
-  " don't use the default snippets
-  let g:UltiSnipsSnippetDirectories = ["snippets"]
-endif
-
+" HiCursorWords
 if exists("HiCursorWords_delay")
-  let g:highlightGroups = [
-    \ 'Identifier',
-    \ 'Special',
-    \ 'jsBlock',
-    \ 'jsBracket',
-    \ 'jsObjectKey',
-    \ 'jsFunctionKey',
-    \ 'jsFuncBlock',
-    \ 'jsFuncCall',
-    \ 'jsFuncArgs',
-    \ 'jsParen'
-  \ ]
-
-  let g:HiCursorWords_hiGroupRegexp = '\(' . join(g:highlightGroups, '\|') . '\)'
-
   highlight! WordUnderTheCursor gui=bold, guifg=#E428A6
 endif
 
+" Operator-Camelize
 if exists('loaded_operator_camelize')
   " mapping for camelizing/decamelizing ('h' for Hump?)
   map <leader>h <plug>(operator-camelize-toggle)
