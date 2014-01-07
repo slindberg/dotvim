@@ -22,14 +22,17 @@ let g:NERDTreeAutoDeleteBuffer = 1
 "
 
 " automatically jump to first error
-let g:syntastic_auto_jump=1
+let g:syntastic_auto_jump = 1
 
-" no syntax highlighting on html files
+" enabled active syntax checking
 let g:syntastic_mode_map = {
   \ 'mode'              : 'active',
   \ 'active_filetypes'  : [],
-  \ 'passive_filetypes' : ['html']
+  \ 'passive_filetypes' : []
 \ }
+
+" no HTML syntax checking in Handlebars templates
+let g:syntastic_filetype_map = { 'handlebars.html': 'handlebars' }
 
 " change default symbol characters
 let g:syntastic_error_symbol = '✗'
