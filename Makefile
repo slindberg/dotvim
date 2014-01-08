@@ -17,7 +17,7 @@ link:
 
 helptags:
 	@ echo "Generating helptags..."
-	@ vim -c 'call pathogen#helptags()|q'
+	@ vim -c 'Helptags|q'
 
 command-t:
 	@ echo "Installing Command-T C extension"

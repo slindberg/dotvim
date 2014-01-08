@@ -6,7 +6,7 @@ source ~/.vim/config/bindings.vim
 
 " initialize pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect('active')
+execute pathogen#infect('active/{}')
 
 " set colorscheme
 source ~/.vim/config/colorscheme.vim
