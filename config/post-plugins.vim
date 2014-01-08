@@ -97,3 +97,8 @@ if exists('loaded_operator_camelize')
   " mapping for camelizing/decamelizing ('h' for Hump?)
   map <leader>h <plug>(operator-camelize-toggle)
 endif
+
+" Fugitive
+if exists('g:loaded_fugitive')
+  nmap <leader>gs :Gstatus<cr>
+endif
