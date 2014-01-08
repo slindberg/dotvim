@@ -36,7 +36,7 @@ let g:syntastic_filetype_map = { 'handlebars.html': 'handlebars' }
 
 " change default symbol characters
 let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_warning_symbol = '!'
 
 "
 " DelimitMate
