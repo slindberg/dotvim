@@ -1,7 +1,9 @@
 INSTALLED = ./bundle
 ACTIVE = ./active
 
-all: submodule link helptags spell command-t
+default: submodule link helptags
+
+all: default spell command-t
 
 submodule:
 	@ echo "Initializing submodules..."
@@ -24,9 +26,9 @@ spell:
 	@ vim -c 'mkspell! spell/en.utf-8.add|q'
 
 command-t:
-	@ echo "Installing Command-T C extension"
+	@ echo "Installing Command-T C extension..."
 	@ cd ./bundle/command-t/ruby/command-t; \
-		ruby extconf.rb; \
+		/usr/bin/ruby extconf.rb; \
 		make
 
-.PHONY: all submodule link helptags spell command-t
+.PHONY: default all submodule link helptags spell command-t
