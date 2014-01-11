@@ -1,3 +1,4 @@
+VIM=mvim -v
 INSTALLED = ./bundle
 ACTIVE = ./active
 
@@ -19,11 +20,11 @@ link:
 
 helptags:
 	@ echo "Generating helptags..."
-	@ vim -c 'Helptags|q'
+	@ ${VIM} -c 'Helptags|q'
 
 spell:
 	@ echo "Generating Vim spell file..."
-	@ vim -c 'mkspell! spell/en.utf-8.add|q'
+	@ ${VIM} -c 'mkspell! spell/en.utf-8.add|q'
 
 command-t:
 	@ echo "Installing Command-T C extension..."
