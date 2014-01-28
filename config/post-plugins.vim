@@ -1,11 +1,7 @@
 " NERDTree
 if exists("loaded_nerd_tree")
-  " toggle NERDTree, using TabsToggle if possible
-  if has("gui_running") && exists(":NERDTreeMirrorToggle")
-    nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
-  else
-    nmap <silent> <leader>n :NERDTreeToggle<cr>
-  endif
+  " toggle NERDTree, using TabsToggle
+  nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
 
   " quit if NERDTree window is the last window open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

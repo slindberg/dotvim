@@ -15,6 +15,10 @@ map Q <nop>
 " remove search highlight with double escape
 map <silent> <esc><esc> :nohlsearch<cr>
 
+" open help pages in a new tab
+cnoreabbrev help tab help
+cnoreabbrev h tab help
+
 " use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> <c-w>k
 nmap <silent> <c-j> <c-w>j
