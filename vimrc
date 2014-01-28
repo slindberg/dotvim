@@ -8,9 +8,6 @@ source ~/.vim/config/bindings.vim
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect('active/{}')
 
-" set colorscheme
-source ~/.vim/config/colorscheme.vim
-
 " auto commands
 source ~/.vim/config/autocmds.vim
 
@@ -19,3 +16,6 @@ source ~/.vim/config/pre-plugins.vim
 
 " run post-init plugin configuration after .vimrc is processed
 autocmd VimEnter * source ~/.vim/config/post-plugins.vim
+
+" set colorscheme
+source ~/.vim/config/colorscheme.vim

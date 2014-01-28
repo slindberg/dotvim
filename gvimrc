@@ -20,22 +20,6 @@ if has("gui_macvim")
   macmenu &File.Open\.\.\. key=<nop>
 endif
 
-" override sign column's background color to be the same as the normal background
-autocmd VimEnter * execute 'highlight SignColumn guibg=' . synIDattr(hlID('Normal'), 'bg')
-
-" define the dummy sign (this only needs to happen once)
-sign define dummy
-
-" add a 'dummy' sign to every buffer to force sign column to always show
-function AddDummySign()
-  " don't add a sign to the NERDTree buffer
-  if bufname('%') !~ '^NERD'
-    " Use ID 9999 so as not to conflict with other signs
-    execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('%')
-  endif
-endfunction
-autocmd BufEnter * call AddDummySign()
-
 " set custom tab label that displays the immediate directory name
 function GuiTabLabel()
   let label = ''
