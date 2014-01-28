@@ -93,12 +93,3 @@ let g:HiCursorWords_hiGroupRegexp = '\(' . join(g:highlightGroups, '\|') . '\)'
 if has("gui_running")
   let g:airline_powerline_fonts = 1
 endif
-
-"
-" Git Gutter
-"
-
-" disable git gutter in terminal, it causes wacky shit to happen
-if !has("gui_running")
-  let g:gitgutter_enabled = 0
-endif
