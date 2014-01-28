@@ -46,13 +46,13 @@ let g:syntastic_warning_symbol = '!'
 let g:delimitMate_expand_cr = 1
 
 " add '<:>' to matched pairs when in html
-au FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
+autocmd FileType html let b:delimitMate_matchpairs = "(:),[:],{:},<:>"
 
 " ignore double quotes in vim files since they start comments
-au FileType vim let b:delimitMate_quotes = "' `"
+autocmd FileType vim let b:delimitMate_quotes = "' `"
 
 " match asterisks in markdown files
-au FileType markdown let b:delimitMate_quotes = "\" ` *"
+autocmd FileType markdown let b:delimitMate_quotes = "\" ` *"
 
 "
 " UltiSnips

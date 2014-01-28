@@ -3,7 +3,7 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
 " switch to command mode when focus is lost
-au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
+autocmd FocusLost,TabLeave * call feedkeys("\<c-\>\<c-n>")
 
 " override sign column's background color to always be the same as the normal background
 let term_type = has("gui_running") ? 'gui' : 'cterm'

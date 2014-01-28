@@ -40,8 +40,8 @@ vnoremap P P=`]
 nnoremap <leader>l :e#<cr>
 
 " shortcut for jumping to the next/previous error in the error list
-nnoremap <leader>] :lnext<CR>
-nnoremap <leader>[ :lprev<CR>
+nnoremap <leader>] :lnext<cr>
+nnoremap <leader>[ :lprev<cr>
 
 " center on what we are looking for
 nnoremap n nzz
@@ -52,17 +52,17 @@ nnoremap G Gzz
 nnoremap <c-o> m`o<esc>``
 
 " toggle paste mode
-nnoremap <silent> <leader>p :set invpaste<CR>
+nnoremap <silent> <leader>p :set invpaste<cr>
 
 " reload vimrc
 nnoremap <leader>rr :source $MYVIMRC<cr>
 
 " Search for visually selected text, forwards or backwards.
-vnoremap <silent> * :<C-U>
-  \let tmp_reg=getreg('"')<Bar>let tmp_regtype=getregtype('"')<CR>
-  \gvy/<C-R><C-R>=substitute(escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', tmp_reg, tmp_regtype)<CR>
-vnoremap <silent> # :<C-U>
-  \let tmp_reg=getreg('"')<Bar>let tmp_regtype=getregtype('"')<CR>
-  \gvy?<C-R><C-R>=substitute(escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', tmp_reg, tmp_regtype)<CR>
+vnoremap <silent> * :<c-u>
+  \let tmp_reg=getreg('"')<bar>let tmp_regtype=getregtype('"')<cr>
+  \gvy/<c-r><c-r>=substitute(escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
+  \gV:call setreg('"', tmp_reg, tmp_regtype)<cr>
+vnoremap <silent> # :<c-u>
+  \let tmp_reg=getreg('"')<bar>let tmp_regtype=getregtype('"')<cr>
+  \gvy?<c-r><c-r>=substitute(escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
+  \gV:call setreg('"', tmp_reg, tmp_regtype)<cr>
