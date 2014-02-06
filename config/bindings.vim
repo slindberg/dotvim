@@ -12,6 +12,9 @@ com! WW :execute ':silent w !sudo tee % > /dev/null' | :edit!
 " Ex mode is dumb
 map Q <nop>
 
+" I just don't use macros... does that make me a bad person?
+map q <nop>
+
 " remove search highlight with double escape
 map <silent> <esc><esc> :nohlsearch<cr>
 
