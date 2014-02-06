@@ -3,6 +3,9 @@ if exists("loaded_nerd_tree")
   " toggle NERDTree, using TabsToggle
   nmap <silent> <leader>n :NERDTreeTabsToggle<cr>
 
+  " locate the current buffer in the tree
+  nmap <silent> <leader>f :NERDTreeFind<cr>
+
   " quit if NERDTree window is the last window open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
@@ -30,7 +33,7 @@ if has("gui_running") && exists("command_t_loaded")
   imap <d-o> <esc>:CommandT<cr>
 
   " shortcut for flushing the cache
-  nmap <leader>f :CommandTFlush<cr>
+  nmap <leader>u :CommandTFlush<cr>
 endif
 
 " Ack
