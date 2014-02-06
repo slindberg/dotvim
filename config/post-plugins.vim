@@ -13,10 +13,10 @@ endif
 " Syntastic
 if exists("loaded_syntastic_plugin")
   " manually perform syntax check (the file must be saved in order to check)
-  nmap <leader>c :w<cr>:SyntasticCheck<cr>
+  nmap <silent> <leader>c :w<cr>:SyntasticCheck<cr>
 
   " remove all error symbols in the signs column
-  nmap <leader>C :SyntasticReset<cr>
+  nmap <silent> <leader>C :SyntasticReset<cr>
 endif
 
 " Command-T
