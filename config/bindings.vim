@@ -54,6 +54,10 @@ nnoremap G Gzz
 " insert a blank line below the current line without entering insert mode
 nnoremap <c-o> m`o<esc>``
 
+" insert a semicolon at the end of the line
+inoremap <leader>; <c-o>m`<c-o>A;<c-o>``
+nnoremap <leader>; m`A;<esc>``
+
 " toggle paste mode
 nnoremap <silent> <leader>p :set invpaste<cr>
 
