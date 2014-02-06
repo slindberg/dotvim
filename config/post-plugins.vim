@@ -100,4 +100,5 @@ endif
 " Fugitive
 if exists('g:loaded_fugitive')
   nmap <leader>gs :Gstatus<cr>
+  nmap <leader>gb :Gblame<cr>
 endif
