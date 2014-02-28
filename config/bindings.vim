@@ -52,7 +52,7 @@ nnoremap N Nzz
 nnoremap G Gzz
 
 " insert a blank line below the current line without entering insert mode
-nnoremap <c-o> m`o<esc>``
+nnoremap <c-n> m`o<esc>``
 
 " insert a semicolon at the end of the line
 inoremap <leader>; <c-o>m`<c-o>A;<c-o>``
