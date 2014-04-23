@@ -55,7 +55,6 @@ nnoremap G Gzz
 nnoremap <c-n> m`o<esc>``
 
 " insert a semicolon at the end of the line
-inoremap <leader>; <c-o>m`<c-o>A;<c-o>``
 nnoremap <leader>; m`A;<esc>``
 
 " toggle paste mode
