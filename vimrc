@@ -2,7 +2,7 @@
 source ~/.vim/config/settings.vim
 
 " commands/mappings
-source ~/.vim/config/bindings.vim
+source ~/.vim/config/mappings.vim
 
 " initialize pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
