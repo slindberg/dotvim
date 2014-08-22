@@ -76,9 +76,6 @@
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = git@github.com:vim-scripts/closetag.vim.git
-[submodule "bundle/golang"]
-	path = bundle/golang
-	url = git@github.com:jnwhiteh/vim-golang.git
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = git@github.com:bkad/CamelCaseMotion.git
@@ -111,3 +108,6 @@
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "bundle/go"]
+	path = bundle/go
+	url = git@github.com:fatih/vim-go.git
