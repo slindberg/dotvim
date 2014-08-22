@@ -62,9 +62,6 @@ autocmd FileType markdown let b:delimitMate_quotes = "\" ` *"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" don't use the default snippets
-let g:UltiSnipsSnippetDirectories = ["snippets"]
-
 "
 " HiCursorWords
 "
