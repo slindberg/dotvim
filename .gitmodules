@@ -85,9 +85,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule "bundle/handlebars"]
-	path = bundle/handlebars
-	url = git@github.com:nono/vim-handlebars.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
@@ -111,3 +108,6 @@
 [submodule "bundle/go"]
 	path = bundle/go
 	url = git@github.com:fatih/vim-go.git
+[submodule "bundle/mustache"]
+	path = bundle/mustache
+	url = git://github.com/mustache/vim-mustache-handlebars.git
