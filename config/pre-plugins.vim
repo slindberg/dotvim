@@ -86,7 +86,5 @@ let g:HiCursorWords_hiGroupRegexp = '\(' . join(g:highlightGroups, '\|') . '\)'
 " Airline
 "
 
-" use patched fonts, but only with GUI-vim
-if has("gui_running")
-  let g:airline_powerline_fonts = 1
-endif
+" use patched fonts
+let g:airline_powerline_fonts = 1
