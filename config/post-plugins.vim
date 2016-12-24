@@ -71,15 +71,6 @@ if exists("loaded_sideways")
   nnoremap <silent> <leader>S :SidewaysLeft<cr>
 endif
 
-" Tabular
-if exists("tabular_loaded")
-  " shortcuts for common alignments
-  nmap <leader>t= :Tabularize /=<cr>
-  vmap <leader>t= :Tabularize /=<cr>
-  nmap <leader>t: :Tabularize /:<cr>
-  vmap <leader>t: :Tabularize /:<cr>
-endif
-
 " Supertab + DelimitMate
 if exists("loaded_supertab") && exists("loaded_delimitMate")
   " if both supertab and delimitmate are loaded, combine their cr mappings
@@ -91,14 +82,3 @@ if exists("HiCursorWords_delay")
   highlight! WordUnderTheCursor gui=bold, guifg=#E428A6
 endif
 
-" Operator-Camelize
-if exists('loaded_operator_camelize')
-  " mapping for camelizing/decamelizing ('h' for Hump?)
-  map <leader>h <plug>(operator-camelize-toggle)
-endif
-
-" Fugitive
-if exists('g:loaded_fugitive')
-  nmap <leader>gs :Gstatus<cr>
-  nmap <leader>gb :Gblame<cr>
-endif

@@ -1,6 +1,3 @@
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
@@ -52,9 +49,6 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = git@github.com:tpope/vim-repeat.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = git@github.com:godlygeek/tabular.git
 [submodule "bundle/delimitmate"]
 	path = bundle/delimitmate
 	url = git@github.com:Raimondi/delimitMate.git
@@ -64,35 +58,18 @@
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = git@github.com:vim-scripts/closetag.vim.git
-[submodule "bundle/camelcasemotion"]
-	path = bundle/camelcasemotion
-	url = git@github.com:bkad/CamelCaseMotion.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
 [submodule "bundle/highlight-cursor-words"]
 	path = bundle/highlight-cursor-words
 	url = git@github.com:OrelSokolov/HiCursorWords.git
-[submodule "bundle/operator-camelize"]
-	path = bundle/operator-camelize
-	url = git@github.com:tyru/operator-camelize.vim.git
-  ignore = untracked
-[submodule "bundle/operator-user"]
-	path = bundle/operator-user
-	url = git@github.com:kana/vim-operator-user.git
-  ignore = untracked
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = git@github.com:bling/vim-airline.git
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
-[submodule "bundle/go"]
-	path = bundle/go
-	url = git@github.com:fatih/vim-go.git
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git

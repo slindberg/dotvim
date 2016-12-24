@@ -55,14 +55,6 @@ autocmd FileType vim let b:delimitMate_quotes = "' `"
 autocmd FileType markdown let b:delimitMate_quotes = "\" ` *"
 
 "
-" UltiSnips
-"
-
-" use the tab key for everything
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-"
 " HiCursorWords
 "
 
