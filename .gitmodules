@@ -37,9 +37,6 @@
 [submodule "bundle/html5"]
 	path = bundle/html5
 	url = git@github.com:othree/html5.vim.git
-[submodule "bundle/css3"]
-	path = bundle/css3
-	url = git@github.com:mutewinter/vim-css3-syntax.git
 [submodule "bundle/sideways"]
 	path = bundle/sideways
 	url = git@github.com:AndrewRadev/sideways.vim.git
@@ -61,9 +58,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule "bundle/highlight-cursor-words"]
-	path = bundle/highlight-cursor-words
-	url = git@github.com:OrelSokolov/HiCursorWords.git
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = git@github.com:bling/vim-airline.git
@@ -79,3 +73,9 @@
 [submodule "bundle/colors-spacegray"]
 	path = bundle/colors-spacegray
 	url = git@github.com:ajh17/Spacegray.vim.git
+[submodule "bundle/highlight-cursor-words"]
+	path = bundle/highlight-cursor-words
+	url = git@github.com:dm356/hicursorwords.git
+[submodule "bundle/css3"]
+	path = bundle/css3
+	url = git@github.com:hail2u/vim-css3-syntax.git
