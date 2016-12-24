@@ -28,18 +28,6 @@
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/colors-ir_black"]
-	path = bundle/colors-ir_black
-	url = https://github.com/twerth/ir_black
-[submodule "bundle/colors-molokai"]
-	path = bundle/colors-molokai
-	url = https://github.com/tomasr/molokai
-[submodule "bundle/colors-smyck"]
-	path = bundle/colors-smyck
-	url = https://github.com/slindberg/vim-colors-smyck
-[submodule "bundle/colors-solarized"]
-	path = bundle/colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = git@github.com:vim-ruby/vim-ruby.git
@@ -79,9 +67,6 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = git@github.com:bkad/CamelCaseMotion.git
-[submodule "bundle/colors-tomorrow"]
-	path = bundle/colors-tomorrow
-	url = git@github.com:d11wtq/tomorrow-theme-vim.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
@@ -111,3 +96,9 @@
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule "bundle/colors-tomorrow"]
+	path = bundle/colors-tomorrow
+	url = git@github.com:joelbrewster/Tomorrow.git
+[submodule "bundle/colors-spacegray"]
+	path = bundle/colors-spacegray
+	url = git@github.com:ajh17/Spacegray.vim.git
